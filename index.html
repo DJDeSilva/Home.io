@@ -376,10 +376,22 @@
       .use, .subtitle, footer, .quick span { color: #333; }
     }
   </style>
+  <style>
+    .tabs { display:flex; gap:8px; padding:12px 0; }
+    .tab-btn { background: rgba(255,255,255,.03); color: var(--muted); border:1px solid var(--line); padding:8px 12px; border-radius:12px; cursor:pointer; font-weight:800 }
+    .tab-btn.active { background: rgba(255,255,255,.06); color: var(--text); border-color: rgba(255,255,255,.12); }
+    .senuth-table { width:100%; max-width:860px; border-collapse:collapse; background:transparent; }
+    .senuth-table th, .senuth-table td { border:1px solid rgba(255,255,255,.07); padding:10px; color:var(--muted); background: rgba(255,255,255,.02); }
+    .senuth-table th { color:var(--text); background: rgba(255,255,255,.03); }
+  </style>
 </head>
 <body>
-  <header>
+  <header id="mainHeader">
     <div class="wrap">
+      <div class="tabs" role="tablist" aria-label="Primary tabs" style="margin-bottom:12px">
+        <button class="tab-btn active" data-target="shortcuts">Shortcuts</button>
+        <button class="tab-btn" data-target="senuth">Senuth</button>
+      </div>
       <div class="topbar">
         <div class="brand">
           <div class="logo">S</div>
@@ -409,7 +421,22 @@
     </div>
   </header>
 
-  <main class="wrap">
+  <header id="senuthHeader" class="hidden">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo">S</div>
+          <div>
+            Senuth
+            <small>Weekday Timetable</small>
+          </div>
+        </div>
+        <button class="tab-btn" data-target="shortcuts" id="backToShortcuts">Shortcuts</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="shortcutsTab">
     <div class="alert">
       <strong>Live DJ tip:</strong> use this page before the gig and during setup. During a live mix, the most useful shortcuts are usually <strong>Shift + Sync</strong>, <strong>Shift + Cue</strong>, <strong>Shift + Roll</strong>, and <strong>Shift + pads</strong> for deleting cues/loops or stopping samples.
     </div>
@@ -510,6 +537,27 @@
     </section>
   </main>
 
+  <div class="wrap hidden" id="senuth" role="tabpanel" aria-hidden="true">
+    <article style="border:1px solid var(--line); padding:18px; border-radius:18px; background:linear-gradient(145deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); margin-top:18px;">
+      <h1 style="margin-top:0; color:var(--text)">Senuth - Weekday Timetable</h1>
+      <p><a href="index.html" style="color:var(--muted); text-decoration:underline;">Back to Shortcuts</a></p>
+      <table class="senuth-table" aria-label="Senuth timetable">
+        <tr><th style="width:160px">Time</th><th>Activity</th></tr>
+        <tr><td>6:15 AM</td><td>Wake Up</td></tr>
+        <tr><td>4:00 PM - 4:15 PM</td><td>Wash</td></tr>
+        <tr><td>4:15 PM - 5:00 PM</td><td>Studies</td></tr>
+        <tr><td>5:00 PM - 5:15 PM</td><td>Clean Lunchbox &amp; Wash</td></tr>
+        <tr><td>5:15 PM - 7:15 PM</td><td>Screen Time</td></tr>
+        <tr><td>7:15 PM - 7:45 PM</td><td>Dinner</td></tr>
+        <tr><td>7:45 PM - 8:00 PM</td><td>Ironing / Exercise</td></tr>
+        <tr><td>8:00 PM - 8:15 PM</td><td>Music</td></tr>
+        <tr><td>8:15 PM - 8:30 PM</td><td>Prepare for the Next Day</td></tr>
+        <tr><td>8:30 PM - 9:00 PM</td><td>Clean House</td></tr>
+        <tr><td>9:00 PM</td><td>Sleep</td></tr>
+      </table>
+    </article>
+  </div>
+
   <footer>
     <div class="wrap">
       <p><strong>Note:</strong> Exact behaviour can vary slightly by firmware version and controller model variant. Test these shortcuts before using them live.</p>
@@ -558,6 +606,33 @@
       document.body.classList.toggle('gig');
       gigMode.textContent = document.body.classList.contains('gig') ? 'All Shortcuts' : 'Gig Mode';
     });
+
+    // Tabs: show/hide primary sections (Shortcuts vs Senuth)
+    const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
+    const shortcutsTab = document.getElementById('shortcutsTab');
+    const senuthTab = document.getElementById('senuth');
+    const mainHeader = document.getElementById('mainHeader');
+    const senuthHeader = document.getElementById('senuthHeader');
+    const tabsBar = document.querySelector('.tabs.wrap');
+
+    function showPage(name) {
+      const isSenuth = name === 'senuth';
+      // tabs active state
+      tabButtons.forEach(b => b.classList.toggle('active', b.dataset.target === name));
+      // page panels
+      shortcutsTab.classList.toggle('hidden', isSenuth);
+      senuthTab.classList.toggle('hidden', !isSenuth);
+      senuthTab.setAttribute('aria-hidden', String(!isSenuth));
+      // headers / tabs bar
+      mainHeader.classList.toggle('hidden', isSenuth);
+      senuthHeader.classList.toggle('hidden', !isSenuth);
+      tabsBar.classList.toggle('hidden', isSenuth);
+    }
+
+    tabButtons.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.target)));
+
+    const backToShortcuts = document.getElementById('backToShortcuts');
+    if (backToShortcuts) backToShortcuts.addEventListener('click', () => showPage('shortcuts'));
   </script>
 </body>
 </html>

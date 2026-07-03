@@ -391,6 +391,7 @@
       <div class="tabs" role="tablist" aria-label="Primary tabs" style="margin-bottom:12px">
         <button class="tab-btn active" data-target="shortcuts">Shortcuts</button>
         <button class="tab-btn" data-target="senuth">Senuth</button>
+        <button class="tab-btn" data-target="quotes">Quotes</button>
       </div>
       <div class="topbar">
         <div class="brand">
@@ -558,6 +559,63 @@
     </article>
   </div>
 
+  <div class="wrap hidden" id="quotes" role="tabpanel" aria-hidden="true">
+    <article style="border:1px solid var(--line); padding:18px; border-radius:18px; background:linear-gradient(145deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); margin-top:18px;">
+      <h1 style="margin-top:0; color:var(--text)">Quotes</h1>
+      <p><a href="index.html" style="color:var(--muted); text-decoration:underline;">Back to Shortcuts</a></p>
+      <section>
+        <p>“Wedding DJ”</p>
+        <p>Hi,</p>
+        <p>Thank you for requesting a quote. Once you accept my quote, the platform will allow us to communicate directly via phone or email.</p>
+        <p>Here&apos;s what&apos;s included:</p>
+        <ul>
+          <li>I&apos;ll help you plan your wedding with templates and advice on the vibe, playlist, first dance, must-play and do-not-play songs, and other special moments.</li>
+          <li>I&apos;ll arrive 1 hour before your guests to set up and sound check.</li>
+          <li>Complete DJ setup including:
+            <ul>
+              <li>2 × JBL PRX ONE speakers with built-in subwoofers (looks elegant and sounds great)</li>
+              <li>Professional DJ equipment with instant song streaming</li>
+              <li>Sound mixer for live instruments</li>
+              <li>3 wireless microphones</li>
+              <li>Dance lights, laser, and smoke machine (I&apos;ll send you a video of the setup.)</li>
+              <li>Complete backup system for any unexpected event.</li>
+            </ul>
+          </li>
+          <li>Guest song requests and karaoke are available if you&apos;d like.</li>
+          <li>No extra charge if your event runs longer—I play until you ask me to stop.</li>
+          <li>My quote includes all equipment, setup, pack-down, travel from Perth, and there are no hidden fees.</li>
+        </ul>
+        <p>You can view my photos, videos, and reviews on my profile page.</p>
+        <p>Thanks,<br>DJChan</p>
+      </section>
+            <section>
+        <p>“Party DJ”</p>
+        <p>Hi,</p>
+        <p>Thank you for requesting a quote. Once you accept my quote, the platform will allow us to communicate directly via phone or email.</p>
+        <p>Here&apos;s what&apos;s included:</p>
+        <ul>
+          <li>I&apos;ll help you plan your party with templates and advice on the vibe, playlist, special dances, must-play and do-not-play songs, and other special moments.</li>
+          <li>I&apos;ll arrive 1 hour before your guests to set up and sound check.</li>
+          <li>Complete DJ setup including:
+            <ul>
+              <li>2 × JBL PRX ONE speakers with built-in subwoofers (looks elegant and sounds great)</li>
+              <li>Professional DJ equipment with instant song streaming</li>
+              <li>Sound mixer for live instruments</li>
+              <li>3 wireless microphones</li>
+              <li>Dance lights, laser, and smoke machine (I&apos;ll send you a video of the setup.)</li>
+              <li>Complete backup system for any unexpected event.</li>
+            </ul>
+          </li>
+          <li>Guest song requests and karaoke are available if you&apos;d like.</li>
+          <li>No extra charge if your event runs longer—I play until you ask me to stop.</li>
+          <li>My quote includes all equipment, setup, pack-down, travel from Perth, and there are no hidden fees.</li>
+        </ul>
+        <p>You can view my photos, videos, and reviews on my profile page.</p>
+        <p>Thanks,<br>DJChan</p>
+      </section>
+    </article>
+  </div>
+
   <footer>
     <div class="wrap">
       <p><strong>Note:</strong> Exact behaviour can vary slightly by firmware version and controller model variant. Test these shortcuts before using them live.</p>
@@ -611,22 +669,26 @@
     const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
     const shortcutsTab = document.getElementById('shortcutsTab');
     const senuthTab = document.getElementById('senuth');
+    const quotesTab = document.getElementById('quotes');
     const mainHeader = document.getElementById('mainHeader');
     const senuthHeader = document.getElementById('senuthHeader');
-    const tabsBar = document.querySelector('.tabs.wrap');
+    const tabsBar = document.querySelector('.tabs');
 
     function showPage(name) {
       const isSenuth = name === 'senuth';
+      const isQuotes = name === 'quotes';
       // tabs active state
       tabButtons.forEach(b => b.classList.toggle('active', b.dataset.target === name));
       // page panels
-      shortcutsTab.classList.toggle('hidden', isSenuth);
+      shortcutsTab.classList.toggle('hidden', isSenuth || isQuotes);
       senuthTab.classList.toggle('hidden', !isSenuth);
+      quotesTab.classList.toggle('hidden', !isQuotes);
       senuthTab.setAttribute('aria-hidden', String(!isSenuth));
+      quotesTab.setAttribute('aria-hidden', String(!isQuotes));
       // headers / tabs bar
-      mainHeader.classList.toggle('hidden', isSenuth);
+      mainHeader.classList.toggle('hidden', isSenuth || isQuotes);
       senuthHeader.classList.toggle('hidden', !isSenuth);
-      tabsBar.classList.toggle('hidden', isSenuth);
+      tabsBar.classList.toggle('hidden', isSenuth || isQuotes);
     }
 
     tabButtons.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.target)));

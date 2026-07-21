@@ -1,702 +1,1296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-AU">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#050507" />
-  <title>Numark Mixstream Pro Shift Key Quick Reference</title>
-  <style>
-    :root {
-      --bg: #050507;
-      --panel: #111119;
-      --panel-2: #171724;
-      --text: #ffffff;
-      --muted: #b7b7c8;
-      --line: rgba(255,255,255,.13);
-      --gold: #f8c85b;
-      --cyan: #53dcff;
-      --pink: #ff4fd8;
-      --green: #66f2a5;
-      --red: #ff7676;
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius: 22px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#050507" />
+    <title>Numark Mixstream Pro Shift Key Quick Reference</title>
+    <style>
+      :root {
+        --bg: #050507;
+        --panel: #111119;
+        --panel-2: #171724;
+        --text: #ffffff;
+        --muted: #b7b7c8;
+        --line: rgba(255, 255, 255, 0.13);
+        --gold: #f8c85b;
+        --cyan: #53dcff;
+        --pink: #ff4fd8;
+        --green: #66f2a5;
+        --red: #ff7676;
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+        --radius: 22px;
+      }
 
-    * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
-    }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
 
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(248,200,91,.24), transparent 24rem),
-        radial-gradient(circle at top right, rgba(83,220,255,.18), transparent 22rem),
-        radial-gradient(circle at 50% 30%, rgba(255,79,216,.10), transparent 25rem),
-        var(--bg);
-      line-height: 1.5;
-      overflow-x: hidden;
-      padding-bottom: env(safe-area-inset-bottom);
-    }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Arial,
+          sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(248, 200, 91, 0.24),
+            transparent 24rem
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(83, 220, 255, 0.18),
+            transparent 22rem
+          ),
+          radial-gradient(
+            circle at 50% 30%,
+            rgba(255, 79, 216, 0.1),
+            transparent 25rem
+          ),
+          var(--bg);
+        line-height: 1.5;
+        overflow-x: hidden;
+        padding-bottom: env(safe-area-inset-bottom);
+      }
 
-    button, input, a {
-      -webkit-tap-highlight-color: transparent;
-    }
+      button,
+      input,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
 
-    .wrap {
-      width: min(980px, calc(100% - 24px));
-      margin: 0 auto;
-    }
+      .wrap {
+        width: min(980px, calc(100% - 24px));
+        margin: 0 auto;
+      }
 
-    header {
-      padding: 26px 0 18px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: linear-gradient(180deg, rgba(5,5,7,.96), rgba(5,5,7,.78));
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--line);
-    }
+      header {
+        padding: 26px 0 18px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: linear-gradient(
+          180deg,
+          rgba(5, 5, 7, 0.96),
+          rgba(5, 5, 7, 0.78)
+        );
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+      }
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 950;
-      letter-spacing: -.02em;
-    }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 950;
+        letter-spacing: -0.02em;
+      }
 
-    .logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--gold), var(--pink), var(--cyan));
-      color: #060609;
-      box-shadow: 0 0 30px rgba(248,200,91,.25);
-      font-weight: 1000;
-    }
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 15px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(
+          135deg,
+          var(--gold),
+          var(--pink),
+          var(--cyan)
+        );
+        color: #060609;
+        box-shadow: 0 0 30px rgba(248, 200, 91, 0.25);
+        font-weight: 1000;
+      }
 
-    .brand small {
-      display: block;
-      color: var(--muted);
-      font-size: .76rem;
-      font-weight: 750;
-      letter-spacing: .02em;
-      margin-top: 1px;
-    }
+      .brand small {
+        display: block;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 750;
+        letter-spacing: 0.02em;
+        margin-top: 1px;
+      }
 
-    .gig-mode {
-      border: 1px solid rgba(248,200,91,.35);
-      color: #050507;
-      background: linear-gradient(135deg, #ffe49c, var(--gold));
-      border-radius: 999px;
-      padding: 11px 14px;
-      min-height: 44px;
-      font-weight: 950;
-      cursor: pointer;
-      white-space: nowrap;
-    }
+      .gig-mode {
+        border: 1px solid rgba(248, 200, 91, 0.35);
+        color: #050507;
+        background: linear-gradient(135deg, #ffe49c, var(--gold));
+        border-radius: 999px;
+        padding: 11px 14px;
+        min-height: 44px;
+        font-weight: 950;
+        cursor: pointer;
+        white-space: nowrap;
+      }
 
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(2.05rem, 8.8vw, 4.6rem);
-      line-height: .95;
-      letter-spacing: -.06em;
-      max-width: 850px;
-    }
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(2.05rem, 8.8vw, 4.6rem);
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+        max-width: 850px;
+      }
 
-    .subtitle {
-      margin: 0;
-      color: var(--muted);
-      font-size: clamp(1rem, 2.5vw, 1.18rem);
-      max-width: 760px;
-    }
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 2.5vw, 1.18rem);
+        max-width: 760px;
+      }
 
-    .controls {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 10px;
-      margin-top: 18px;
-    }
+      .controls {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        margin-top: 18px;
+      }
 
-    .search {
-      width: 100%;
-      min-height: 50px;
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      background: rgba(255,255,255,.07);
-      color: var(--text);
-      padding: 0 16px;
-      font-size: 16px;
-      outline: none;
-    }
+      .search {
+        width: 100%;
+        min-height: 50px;
+        border: 1px solid var(--line);
+        border-radius: 17px;
+        background: rgba(255, 255, 255, 0.07);
+        color: var(--text);
+        padding: 0 16px;
+        font-size: 16px;
+        outline: none;
+      }
 
-    .search::placeholder { color: #858597; }
+      .search::placeholder {
+        color: #858597;
+      }
 
-    .clear-btn {
-      min-height: 50px;
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      background: rgba(255,255,255,.07);
-      color: var(--text);
-      padding: 0 14px;
-      font-weight: 900;
-      cursor: pointer;
-    }
+      .clear-btn {
+        min-height: 50px;
+        border: 1px solid var(--line);
+        border-radius: 17px;
+        background: rgba(255, 255, 255, 0.07);
+        color: var(--text);
+        padding: 0 14px;
+        font-weight: 900;
+        cursor: pointer;
+      }
 
-    .chips {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding: 14px 0 0;
-      scrollbar-width: none;
-    }
+      .chips {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 14px 0 0;
+        scrollbar-width: none;
+      }
 
-    .chips::-webkit-scrollbar { display: none; }
+      .chips::-webkit-scrollbar {
+        display: none;
+      }
 
-    .chip {
-      flex: 0 0 auto;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      border-radius: 999px;
-      padding: 9px 13px;
-      font-weight: 900;
-      cursor: pointer;
-    }
+      .chip {
+        flex: 0 0 auto;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 9px 13px;
+        font-weight: 900;
+        cursor: pointer;
+      }
 
-    .chip.active {
-      background: rgba(83,220,255,.16);
-      border-color: rgba(83,220,255,.42);
-      color: #c8f6ff;
-    }
+      .chip.active {
+        background: rgba(83, 220, 255, 0.16);
+        border-color: rgba(83, 220, 255, 0.42);
+        color: #c8f6ff;
+      }
 
-    main { padding: 20px 0 36px; }
+      main {
+        padding: 20px 0 36px;
+      }
 
-    .alert {
-      border: 1px solid rgba(248,200,91,.35);
-      background: rgba(248,200,91,.10);
-      border-radius: var(--radius);
-      padding: 16px;
-      color: #ffe9aa;
-      margin-bottom: 16px;
-      box-shadow: var(--shadow);
-    }
+      .alert {
+        border: 1px solid rgba(248, 200, 91, 0.35);
+        background: rgba(248, 200, 91, 0.1);
+        border-radius: var(--radius);
+        padding: 16px;
+        color: #ffe9aa;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow);
+      }
 
-    .alert strong { color: var(--gold); }
+      .alert strong {
+        color: var(--gold);
+      }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
 
-    .card {
-      border: 1px solid var(--line);
-      background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.045));
-      border-radius: var(--radius);
-      padding: 18px;
-      min-height: 162px;
-      box-shadow: 0 14px 38px rgba(0,0,0,.26);
-      position: relative;
-      overflow: hidden;
-    }
+      .card {
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.09),
+          rgba(255, 255, 255, 0.045)
+        );
+        border-radius: var(--radius);
+        padding: 18px;
+        min-height: 162px;
+        box-shadow: 0 14px 38px rgba(0, 0, 0, 0.26);
+        position: relative;
+        overflow: hidden;
+      }
 
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(circle at 90% 0%, rgba(255,255,255,.10), transparent 9rem);
-    }
+      .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          circle at 90% 0%,
+          rgba(255, 255, 255, 0.1),
+          transparent 9rem
+        );
+      }
 
-    .card > * { position: relative; z-index: 1; }
+      .card > * {
+        position: relative;
+        z-index: 1;
+      }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 6px 9px;
-      border-radius: 999px;
-      font-size: .74rem;
-      line-height: 1;
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      margin-bottom: 12px;
-    }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 6px 9px;
+        border-radius: 999px;
+        font-size: 0.74rem;
+        line-height: 1;
+        font-weight: 950;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 12px;
+      }
 
-    .badge.critical { background: rgba(102,242,165,.12); color: #bcffd8; border: 1px solid rgba(102,242,165,.28); }
-    .badge.pad { background: rgba(83,220,255,.12); color: #c8f6ff; border: 1px solid rgba(83,220,255,.28); }
-    .badge.screen { background: rgba(255,79,216,.12); color: #ffd0f4; border: 1px solid rgba(255,79,216,.28); }
-    .badge.warning { background: rgba(255,118,118,.12); color: #ffc7c7; border: 1px solid rgba(255,118,118,.28); }
+      .badge.critical {
+        background: rgba(102, 242, 165, 0.12);
+        color: #bcffd8;
+        border: 1px solid rgba(102, 242, 165, 0.28);
+      }
+      .badge.pad {
+        background: rgba(83, 220, 255, 0.12);
+        color: #c8f6ff;
+        border: 1px solid rgba(83, 220, 255, 0.28);
+      }
+      .badge.screen {
+        background: rgba(255, 79, 216, 0.12);
+        color: #ffd0f4;
+        border: 1px solid rgba(255, 79, 216, 0.28);
+      }
+      .badge.warning {
+        background: rgba(255, 118, 118, 0.12);
+        color: #ffc7c7;
+        border: 1px solid rgba(255, 118, 118, 0.28);
+      }
 
-    .shortcut {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: 9px;
-      font-size: clamp(1.18rem, 3.7vw, 1.55rem);
-      font-weight: 1000;
-      letter-spacing: -.035em;
-    }
+      .shortcut {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 9px;
+        font-size: clamp(1.18rem, 3.7vw, 1.55rem);
+        font-weight: 1000;
+        letter-spacing: -0.035em;
+      }
 
-    kbd {
-      font-family: inherit;
-      display: inline-flex;
-      align-items: center;
-      min-height: 36px;
-      padding: 5px 10px;
-      border-radius: 10px;
-      background: #f3f3f8;
-      color: #090910;
-      box-shadow: inset 0 -3px rgba(0,0,0,.18), 0 5px 14px rgba(0,0,0,.25);
-      font-weight: 1000;
-    }
+      kbd {
+        font-family: inherit;
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background: #f3f3f8;
+        color: #090910;
+        box-shadow:
+          inset 0 -3px rgba(0, 0, 0, 0.18),
+          0 5px 14px rgba(0, 0, 0, 0.25);
+        font-weight: 1000;
+      }
 
-    .plus {
-      color: var(--gold);
-      font-weight: 1000;
-    }
+      .plus {
+        color: var(--gold);
+        font-weight: 1000;
+      }
 
-    .does {
-      margin: 0 0 8px;
-      color: var(--text);
-      font-weight: 850;
-      font-size: 1.03rem;
-    }
+      .does {
+        margin: 0 0 8px;
+        color: var(--text);
+        font-weight: 850;
+        font-size: 1.03rem;
+      }
 
-    .use {
-      margin: 0;
-      color: var(--muted);
-      font-size: .96rem;
-    }
+      .use {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
 
-    .note {
-      margin-top: 12px;
-      padding: 11px 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.06);
-      color: #d8d8e8;
-      font-size: .9rem;
-      border: 1px solid rgba(255,255,255,.09);
-    }
+      .note {
+        margin-top: 12px;
+        padding: 11px 12px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.06);
+        color: #d8d8e8;
+        font-size: 0.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+      }
 
-    .quick-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin: 16px 0;
-    }
+      .quick-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 16px 0;
+      }
 
-    .quick {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.075);
-      border-radius: 18px;
-      padding: 13px;
-      text-align: center;
-    }
+      .quick {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.075);
+        border-radius: 18px;
+        padding: 13px;
+        text-align: center;
+      }
 
-    .quick strong {
-      display: block;
-      color: var(--gold);
-      font-size: .92rem;
-      line-height: 1.15;
-      margin-bottom: 4px;
-    }
+      .quick strong {
+        display: block;
+        color: var(--gold);
+        font-size: 0.92rem;
+        line-height: 1.15;
+        margin-bottom: 4px;
+      }
 
-    .quick span {
-      color: var(--muted);
-      font-size: .82rem;
-      font-weight: 700;
-    }
+      .quick span {
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
 
-    .hidden { display: none !important; }
+      .hidden {
+        display: none !important;
+      }
 
-    footer {
-      color: var(--muted);
-      padding: 20px 0 34px;
-      border-top: 1px solid var(--line);
-      font-size: .9rem;
-    }
+      footer {
+        color: var(--muted);
+        padding: 20px 0 34px;
+        border-top: 1px solid var(--line);
+        font-size: 0.9rem;
+      }
 
-    footer strong { color: var(--text); }
+      footer strong {
+        color: var(--text);
+      }
 
-    .gig .card:not([data-priority="yes"]) { display: none; }
-    .gig .alert { background: rgba(102,242,165,.10); border-color: rgba(102,242,165,.32); color: #d7ffe5; }
-    .gig .gig-mode { background: linear-gradient(135deg, #b7ffd2, var(--green)); }
+      .gig .card:not([data-priority="yes"]) {
+        display: none;
+      }
+      .gig .alert {
+        background: rgba(102, 242, 165, 0.1);
+        border-color: rgba(102, 242, 165, 0.32);
+        color: #d7ffe5;
+      }
+      .gig .gig-mode {
+        background: linear-gradient(135deg, #b7ffd2, var(--green));
+      }
 
-    @media (max-width: 760px) {
-      .wrap { width: calc(100% - 20px); }
-      header { padding: 16px 0 13px; }
-      .topbar { margin-bottom: 14px; }
-      .brand { gap: 9px; }
-      .logo { width: 40px; height: 40px; border-radius: 14px; }
-      .gig-mode { min-height: 42px; padding: 10px 12px; font-size: .9rem; }
-      .grid { grid-template-columns: 1fr; gap: 11px; }
-      .controls { grid-template-columns: 1fr; }
-      .clear-btn { display: none; }
-      .quick-strip { grid-template-columns: repeat(2, 1fr); }
-      .card { min-height: auto; padding: 16px; border-radius: 20px; }
-      .shortcut { margin-bottom: 8px; }
-      kbd { min-height: 34px; padding: 5px 9px; }
-    }
+      @media (max-width: 760px) {
+        .wrap {
+          width: calc(100% - 20px);
+        }
+        header {
+          padding: 16px 0 13px;
+        }
+        .topbar {
+          margin-bottom: 14px;
+        }
+        .brand {
+          gap: 9px;
+        }
+        .logo {
+          width: 40px;
+          height: 40px;
+          border-radius: 14px;
+        }
+        .gig-mode {
+          min-height: 42px;
+          padding: 10px 12px;
+          font-size: 0.9rem;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+          gap: 11px;
+        }
+        .controls {
+          grid-template-columns: 1fr;
+        }
+        .clear-btn {
+          display: none;
+        }
+        .quick-strip {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .card {
+          min-height: auto;
+          padding: 16px;
+          border-radius: 20px;
+        }
+        .shortcut {
+          margin-bottom: 8px;
+        }
+        kbd {
+          min-height: 34px;
+          padding: 5px 9px;
+        }
+      }
 
-    @media (max-width: 390px) {
-      .wrap { width: calc(100% - 16px); }
-      .brand small { display: none; }
-      .gig-mode { font-size: .82rem; padding-inline: 10px; }
-      h1 { font-size: 2rem; }
-      .quick-strip { grid-template-columns: 1fr; }
-      .chips { padding-top: 11px; }
-    }
+      @media (max-width: 390px) {
+        .wrap {
+          width: calc(100% - 16px);
+        }
+        .brand small {
+          display: none;
+        }
+        .gig-mode {
+          font-size: 0.82rem;
+          padding-inline: 10px;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+        .quick-strip {
+          grid-template-columns: 1fr;
+        }
+        .chips {
+          padding-top: 11px;
+        }
+      }
 
-    @media print {
-      body { background: white; color: black; }
-      header { position: static; background: white; color: black; }
-      .controls, .chips, .gig-mode { display: none; }
-      .grid { grid-template-columns: repeat(2, 1fr); }
-      .card, .alert, .quick { box-shadow: none; background: white; color: black; border-color: #ccc; }
-      .use, .subtitle, footer, .quick span { color: #333; }
-    }
-  </style>
-  <style>
-    .tabs { display:flex; gap:8px; padding:12px 0; }
-    .tab-btn { background: rgba(255,255,255,.03); color: var(--muted); border:1px solid var(--line); padding:8px 12px; border-radius:12px; cursor:pointer; font-weight:800 }
-    .tab-btn.active { background: rgba(255,255,255,.06); color: var(--text); border-color: rgba(255,255,255,.12); }
-    .senuth-table { width:100%; max-width:860px; border-collapse:collapse; background:transparent; }
-    .senuth-table th, .senuth-table td { border:1px solid rgba(255,255,255,.07); padding:10px; color:var(--muted); background: rgba(255,255,255,.02); }
-    .senuth-table th { color:var(--text); background: rgba(255,255,255,.03); }
-  </style>
-</head>
-<body>
-  <header id="mainHeader">
-    <div class="wrap">
-      <div class="tabs" role="tablist" aria-label="Primary tabs" style="margin-bottom:12px">
-        <button class="tab-btn active" data-target="shortcuts">Shortcuts</button>
-        <button class="tab-btn" data-target="senuth">Senuth</button>
-        <button class="tab-btn" data-target="quotes">Quotes</button>
-      </div>
-      <div class="topbar">
-        <div class="brand">
-          <div class="logo">S</div>
-          <div>
-            Mixstream Pro Shift Key
-            <small>Quick reference for live DJ use</small>
-          </div>
+      @media print {
+        body {
+          background: white;
+          color: black;
+        }
+        header {
+          position: static;
+          background: white;
+          color: black;
+        }
+        .controls,
+        .chips,
+        .gig-mode {
+          display: none;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .card,
+        .alert,
+        .quick {
+          box-shadow: none;
+          background: white;
+          color: black;
+          border-color: #ccc;
+        }
+        .use,
+        .subtitle,
+        footer,
+        .quick span {
+          color: #333;
+        }
+      }
+    </style>
+    <style>
+      .tabs {
+        display: flex;
+        gap: 8px;
+        padding: 12px 0;
+      }
+      .tab-btn {
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--muted);
+        border: 1px solid var(--line);
+        padding: 8px 12px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: 800;
+      }
+      .tab-btn.active {
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+      .senuth-table {
+        width: 100%;
+        max-width: 860px;
+        border-collapse: collapse;
+        background: transparent;
+      }
+      .senuth-table th,
+      .senuth-table td {
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 10px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .senuth-table th {
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.03);
+      }
+    </style>
+  </head>
+  <body>
+    <header id="mainHeader">
+      <div class="wrap">
+        <div
+          class="tabs"
+          role="tablist"
+          aria-label="Primary tabs"
+          style="margin-bottom: 12px"
+        >
+          <button class="tab-btn active" data-target="shortcuts">
+            Shortcuts
+          </button>
+          <button class="tab-btn" data-target="senuth">Senuth</button>
+          <button class="tab-btn" data-target="quotes">Quotes</button>
+          <button class="tab-btn" data-target="prx">PRX</button>
         </div>
-        <button class="gig-mode" id="gigMode" type="button">Gig Mode</button>
-      </div>
-
-      <h1>Numark Mixstream Pro Shift Shortcuts</h1>
-      <p class="subtitle">A mobile-friendly cheat sheet combining the original Shift list plus Shift + Auto Loop and Shift + Roll.</p>
-
-      <div class="controls">
-        <input class="search" id="search" type="search" placeholder="Search: sync, cue, roll, sampler, loop, lighting..." autocomplete="off" />
-        <button class="clear-btn" id="clear" type="button">Clear</button>
-      </div>
-
-      <div class="chips" aria-label="Filter shortcuts">
-        <button class="chip active" data-filter="all" type="button">All</button>
-        <button class="chip" data-filter="critical" type="button">Must-know</button>
-        <button class="chip" data-filter="pad" type="button">Pads</button>
-        <button class="chip" data-filter="screen" type="button">Screen / Browse</button>
-        <button class="chip" data-filter="warning" type="button">Careful</button>
-      </div>
-    </div>
-  </header>
-
-  <header id="senuthHeader" class="hidden">
-    <div class="wrap">
-      <div class="topbar">
-        <div class="brand">
-          <div class="logo">S</div>
-          <div>
-            Senuth
-            <small>Weekday Timetable</small>
+        <div class="topbar">
+          <div class="brand">
+            <div class="logo">S</div>
+            <div>
+              Mixstream Pro Shift Key
+              <small>Quick reference for live DJ use</small>
+            </div>
           </div>
+          <button class="gig-mode" id="gigMode" type="button">Gig Mode</button>
         </div>
-        <button class="tab-btn" data-target="shortcuts" id="backToShortcuts">Shortcuts</button>
+
+        <h1>Numark Mixstream Pro Shift Shortcuts</h1>
+        <p class="subtitle">
+          A mobile-friendly cheat sheet combining the original Shift list plus
+          Shift + Auto Loop and Shift + Roll.
+        </p>
+
+        <div class="controls">
+          <input
+            class="search"
+            id="search"
+            type="search"
+            placeholder="Search: sync, cue, roll, sampler, loop, lighting..."
+            autocomplete="off"
+          />
+          <button class="clear-btn" id="clear" type="button">Clear</button>
+        </div>
+
+        <div class="chips" aria-label="Filter shortcuts">
+          <button class="chip active" data-filter="all" type="button">
+            All
+          </button>
+          <button class="chip" data-filter="critical" type="button">
+            Must-know
+          </button>
+          <button class="chip" data-filter="pad" type="button">Pads</button>
+          <button class="chip" data-filter="screen" type="button">
+            Screen / Browse
+          </button>
+          <button class="chip" data-filter="warning" type="button">
+            Careful
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="wrap" id="shortcutsTab">
-    <div class="alert">
-      <strong>Live DJ tip:</strong> use this page before the gig and during setup. During a live mix, the most useful shortcuts are usually <strong>Shift + Sync</strong>, <strong>Shift + Cue</strong>, <strong>Shift + Roll</strong>, and <strong>Shift + pads</strong> for deleting cues/loops or stopping samples.
-    </div>
+    <header id="senuthHeader" class="hidden">
+      <div class="wrap">
+        <div class="topbar">
+          <div class="brand">
+            <div class="logo">S</div>
+            <div>
+              Senuth
+              <small>Weekday Timetable</small>
+            </div>
+          </div>
+          <button class="tab-btn" data-target="shortcuts" id="backToShortcuts">
+            Shortcuts
+          </button>
+        </div>
+      </div>
+    </header>
 
-    <section class="quick-strip" aria-label="Top four shortcuts">
-      <div class="quick"><strong>Shift + Sync</strong><span>Turn Sync off</span></div>
-      <div class="quick"><strong>Shift + Cue</strong><span>Jump to track start</span></div>
-      <div class="quick"><strong>Shift + Roll</strong><span>Sampler mode</span></div>
-      <div class="quick"><strong>Shift + Pad</strong><span>Clear cue / loop / sample</span></div>
-    </section>
+    <main class="wrap" id="shortcutsTab">
+      <div class="alert">
+        <strong>Live DJ tip:</strong> use this page before the gig and during
+        setup. During a live mix, the most useful shortcuts are usually
+        <strong>Shift + Sync</strong>, <strong>Shift + Cue</strong>,
+        <strong>Shift + Roll</strong>, and <strong>Shift + pads</strong> for
+        deleting cues/loops or stopping samples.
+      </div>
 
-    <section class="grid" id="cards">
-      <article class="card" data-category="screen" data-priority="yes" data-text="shift browse knob press prepare list selected track next song">
-        <span class="badge screen">Screen / Browse</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Browse Knob Press</kbd></div>
-        <p class="does">Add selected track to the Prepare list.</p>
-        <p class="use">Use this when you find a possible next song and want to keep it ready without loading it to a deck.</p>
-      </article>
-
-      <article class="card" data-category="screen" data-priority="no" data-text="shift view waveform layout vertical horizontal screen view">
-        <span class="badge screen">Screen / Browse</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>View</kbd></div>
-        <p class="does">Change the waveform / screen view.</p>
-        <p class="use">Useful when you want a different deck display or waveform layout while mixing.</p>
-      </article>
-
-      <article class="card" data-category="screen" data-priority="no" data-text="shift source lighting engine lighting soundswitch phillips hue dmx">
-        <span class="badge screen">Screen / Browse</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Source / Lighting</kbd></div>
-        <p class="does">Open lighting controls on supported firmware/layouts.</p>
-        <p class="use">Use this for Engine Lighting / SoundSwitch lighting control when your lighting setup is configured.</p>
-      </article>
-
-      <article class="card" data-category="critical" data-priority="yes" data-text="shift smart scratch jog mode scratch wheel temporary nudge pitch bend">
-        <span class="badge critical">Must-know</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Smart Scratch</kbd></div>
-        <p class="does">Switch between Smart Scratch and Jog mode behaviour.</p>
-        <p class="use">Helpful when you want the jog wheel to behave more like pitch bend / nudge instead of scratch control.</p>
-      </article>
-
-      <article class="card" data-category="critical" data-priority="yes" data-text="shift sync off turn off sync bpm beatgrid manual tempo">
-        <span class="badge critical">Must-know</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Sync</kbd></div>
-        <p class="does">Turn Sync off.</p>
-        <p class="use">Very useful when you want to stop BPM sync and take manual tempo control again.</p>
-      </article>
-
-      <article class="card" data-category="critical" data-priority="yes" data-text="shift cue start beginning track return first beat reset">
-        <span class="badge critical">Must-know</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Cue</kbd></div>
-        <p class="does">Return to the beginning of the track.</p>
-        <p class="use">Good for quickly restarting from the start point while preparing or practising.</p>
-      </article>
-
-      <article class="card" data-category="critical" data-priority="yes" data-text="shift play pause stutter initial cue restart performance effect">
-        <span class="badge critical">Must-know</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Play / Pause</kbd></div>
-        <p class="does">Stutter-play from the initial cue point.</p>
-        <p class="use">Use carefully as a performance restart/stutter effect.</p>
-      </article>
-
-      <article class="card" data-category="critical" data-priority="yes" data-text="shift pitch bend plus minus pitch range fader percent 4 8 10 20 50 100">
-        <span class="badge critical">Must-know</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Pitch Bend − / +</kbd></div>
-        <p class="does">Change the pitch fader range.</p>
-        <p class="use">Useful when you need smaller or larger tempo control, such as ±4%, ±8%, ±10%, ±20%, ±50% or ±100%.</p>
-      </article>
-
-      <article class="card" data-category="pad" data-priority="yes" data-text="shift hot cue pad clear delete cue point remove cue">
-        <span class="badge pad">Pads</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Hot Cue Pad</kbd></div>
-        <p class="does">Clear / delete that hot cue.</p>
-        <p class="use">Use this to remove an unwanted cue point from the current track.</p>
-      </article>
-
-      <article class="card" data-category="pad" data-priority="yes" data-text="shift saved loop pad delete saved loop remove loop">
-        <span class="badge pad">Pads</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Saved Loop Pad</kbd></div>
-        <p class="does">Delete that saved loop.</p>
-        <p class="use">Use this when a saved loop is wrong or no longer needed.</p>
-      </article>
-
-      <article class="card" data-category="warning" data-priority="no" data-text="shift auto loop no separate documented shortcut second bank auto loop button again loop lengths">
-        <span class="badge warning">Careful</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Auto Loop</kbd></div>
-        <p class="does">Usually no separate Shift shortcut is documented for Auto Loop.</p>
-        <p class="use">For Auto Loop, press <strong>Auto Loop</strong> to enter the mode, then press <strong>Auto Loop again</strong> for the second bank of loop lengths. Press a pad to activate/deactivate the loop.</p>
-        <div class="note">Keep this row here as a reminder: if you are trying to access more Auto Loop lengths, press Auto Loop again rather than relying on Shift.</div>
-      </article>
-
-      <article class="card" data-category="pad" data-priority="yes" data-text="shift roll sampler mode drop sampler samples trigger drops risers fx drums">
-        <span class="badge pad">Pads</span>
-        <div class="shortcut"><kbd>Shift</kbd><span class="plus">+</span><kbd>Roll</kbd></div>
-        <p class="does">Enter Sampler Mode on Engine DJ 3.0+.</p>
-        <p class="use">Use this to trigger drops, drums, risers, FX or other one-shot samples from the performance pads.</p>
-        <div class="note">Sampler tip: in Sampler Mode, holding <strong>Shift + a playing sample pad</strong> stops that sample. In library view, Shift + sample pad can unload/eject a sample slot.</div>
-      </article>
-    </section>
-  </main>
-
-  <div class="wrap hidden" id="senuth" role="tabpanel" aria-hidden="true">
-    <article style="border:1px solid var(--line); padding:18px; border-radius:18px; background:linear-gradient(145deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); margin-top:18px;">
-      <h1 style="margin-top:0; color:var(--text)">Senuth - Weekday Timetable</h1>
-      <p><a href="index.html" style="color:var(--muted); text-decoration:underline;">Back to Shortcuts</a></p>
-      <table class="senuth-table" aria-label="Senuth timetable">
-        <tr><th style="width:160px">Time</th><th>Activity</th></tr>
-        <tr><td>6:15 AM</td><td>Wake Up</td></tr>
-        <tr><td>4:00 PM - 4:15 PM</td><td>Wash</td></tr>
-        <tr><td>4:15 PM - 5:00 PM</td><td>Studies</td></tr>
-        <tr><td>5:00 PM - 5:15 PM</td><td>Clean Lunchbox &amp; Wash</td></tr>
-        <tr><td>5:15 PM - 7:15 PM</td><td>Screen Time</td></tr>
-        <tr><td>7:15 PM - 7:45 PM</td><td>Dinner</td></tr>
-        <tr><td>7:45 PM - 8:00 PM</td><td>Ironing / Exercise</td></tr>
-        <tr><td>8:00 PM - 8:15 PM</td><td>Music</td></tr>
-        <tr><td>8:15 PM - 8:30 PM</td><td>Prepare for the Next Day</td></tr>
-        <tr><td>8:30 PM - 9:00 PM</td><td>Clean House</td></tr>
-        <tr><td>9:00 PM</td><td>Sleep</td></tr>
-      </table>
-    </article>
-  </div>
-
-  <div class="wrap hidden" id="quotes" role="tabpanel" aria-hidden="true">
-    <article style="border:1px solid var(--line); padding:18px; border-radius:18px; background:linear-gradient(145deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); margin-top:18px;">
-      <h1 style="margin-top:0; color:var(--text)">Quotes</h1>
-      <p><a href="index.html" style="color:var(--muted); text-decoration:underline;">Back to Shortcuts</a></p>
-      <section>
-        <p>“Airtasker”</p>
-        <p>Hi,</p>
-        <p>Tx for requesting a quote. Once you accept my offer, the platform will allow us to communicate easier.. Then I will share my planning and song selection tools.</p>
-        <p>Here's what's next/included:</p>
-        <ul>
-          <li>Help you plan your wedding/party with my templates and advice on the vibe, playlist, first/special dance, cake cutting, must-play and do-not-play songs, and other special moments.</li>
-          <li>You can meet me at my residence, e-meet, or message to see my setup physically and discuss details.</li>
-          <li>I arrive 1 hour (1.5 for weddings) before start to set up and sound check.</li>
-        </ul>
-        <p>DJ Setup:</p>
-        <ul>
-          <li>2 × JBL PRX ONE column arrays (has 2 built-in subwoofers, looks elegant and sounds amazing)</li>
-          <li>OR 2 x JBL 15inch Speakers - Little bulky but not bad for budget events</li>
-          <li>All in one DJ controller (instant song streaming via TIDAL) helps me to play any song request on the spot (when I don't have it already)</li>
-          <li>6 Channel Sound mixer for live instruments</li>
-          <li>3 wireless, 2 wired microphones (for Karaoke/Sing-along)</li>
-          <li>Lights, 2 moving heads, laser, and smoke machine. (Bubble machine costs extra)</li>
-          <li>Complete backup system for any unexpected event (Applicable for weddings only)</li>
-          <li>Microphone stands, keyboard stand available on request for free</li>
-          <li>No extra charge even if your event runs longer than planned</li>
-          <li>Quote includes travel from Perth, arriving early for setup, all equipment, setup, DJ service, pack-down. No hidden fees. I own all the equipment and I will be your DJ</li>
-          <li>Have a look at my profile for reviews and photos. This platform does not allow audio or video uploads.</li>
-        </ul>
-        <p>Thanks,<br>DJChanPerth</p>
+      <section class="quick-strip" aria-label="Top four shortcuts">
+        <div class="quick">
+          <strong>Shift + Sync</strong><span>Turn Sync off</span>
+        </div>
+        <div class="quick">
+          <strong>Shift + Cue</strong><span>Jump to track start</span>
+        </div>
+        <div class="quick">
+          <strong>Shift + Roll</strong><span>Sampler mode</span>
+        </div>
+        <div class="quick">
+          <strong>Shift + Pad</strong><span>Clear cue / loop / sample</span>
+        </div>
       </section>
-      <section>
-        <p>“crowdpleaser”</p>
-        <p>Hi,</p>
-        <p>Tx for requesting a quote. Once you accept my offer, the platform will allow us to communicate easier.. Then I will share my planning and song selection tools.</p>
-        <p>Here's what's next/included:</p>
-        <ul>
-          <li>Help you plan your wedding/party with my templates and advice on the vibe, playlist, first/special dance, cake cutting, must-play and do-not-play songs, and other special moments.</li>
-          <li>You can meet me at my residence, e-meet, or message to see my setup physically and discuss details.</li>
-          <li>I arrive 1 hour (1.5 for weddings) before start to set up and sound check.</li>
-        </ul>
-        <p>DJ Setup:</p>
-        <ul>
-          <li>2 × JBL PRX ONE column arrays (has 2 built-in subwoofers, looks elegant and sounds amazing)</li>
-          <li>OR 2 x JBL 15inch Speakers - Little bulky but not bad for budget events</li>
-          <li>All in one DJ controller (instant song streaming via TIDAL) helps me to play any song request on the spot (when I don't have it already)</li>
-          <li>6 Channel Sound mixer for live instruments</li>
-          <li>3 wireless, 2 wired microphones (for Karaoke/Sing-along)</li>
-          <li>Lights, 2 moving heads, laser, and smoke machine. (Bubble machine costs extra)</li>
-          <li>Complete backup system for any unexpected event (Applicable for weddings only)</li>
-          <li>No extra charge even if your event runs longer than planned</li>
-          <li>Quote includes travel from Perth, arriving early for setup, all equipment, setup, DJ service, pack-down. No hidden fees. I own all the equipment and I will be your DJ</li>
-          <li>Microphone stands, keyboard stand available on request for free</li>
-          <li>Have a look at my profile for reviews, photos, audio and videos.</li>
-        </ul>
-        <p>Thanks,<br>DJChanPerth</p>
+
+      <section class="grid" id="cards">
+        <article
+          class="card"
+          data-category="screen"
+          data-priority="yes"
+          data-text="shift browse knob press prepare list selected track next song"
+        >
+          <span class="badge screen">Screen / Browse</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span
+            ><kbd>Browse Knob Press</kbd>
+          </div>
+          <p class="does">Add selected track to the Prepare list.</p>
+          <p class="use">
+            Use this when you find a possible next song and want to keep it
+            ready without loading it to a deck.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="screen"
+          data-priority="no"
+          data-text="shift view waveform layout vertical horizontal screen view"
+        >
+          <span class="badge screen">Screen / Browse</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>View</kbd>
+          </div>
+          <p class="does">Change the waveform / screen view.</p>
+          <p class="use">
+            Useful when you want a different deck display or waveform layout
+            while mixing.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="screen"
+          data-priority="no"
+          data-text="shift source lighting engine lighting soundswitch phillips hue dmx"
+        >
+          <span class="badge screen">Screen / Browse</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span
+            ><kbd>Source / Lighting</kbd>
+          </div>
+          <p class="does">
+            Open lighting controls on supported firmware/layouts.
+          </p>
+          <p class="use">
+            Use this for Engine Lighting / SoundSwitch lighting control when
+            your lighting setup is configured.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="critical"
+          data-priority="yes"
+          data-text="shift smart scratch jog mode scratch wheel temporary nudge pitch bend"
+        >
+          <span class="badge critical">Must-know</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>Smart Scratch</kbd>
+          </div>
+          <p class="does">
+            Switch between Smart Scratch and Jog mode behaviour.
+          </p>
+          <p class="use">
+            Helpful when you want the jog wheel to behave more like pitch bend /
+            nudge instead of scratch control.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="critical"
+          data-priority="yes"
+          data-text="shift sync off turn off sync bpm beatgrid manual tempo"
+        >
+          <span class="badge critical">Must-know</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>Sync</kbd>
+          </div>
+          <p class="does">Turn Sync off.</p>
+          <p class="use">
+            Very useful when you want to stop BPM sync and take manual tempo
+            control again.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="critical"
+          data-priority="yes"
+          data-text="shift cue start beginning track return first beat reset"
+        >
+          <span class="badge critical">Must-know</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>Cue</kbd>
+          </div>
+          <p class="does">Return to the beginning of the track.</p>
+          <p class="use">
+            Good for quickly restarting from the start point while preparing or
+            practising.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="critical"
+          data-priority="yes"
+          data-text="shift play pause stutter initial cue restart performance effect"
+        >
+          <span class="badge critical">Must-know</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>Play / Pause</kbd>
+          </div>
+          <p class="does">Stutter-play from the initial cue point.</p>
+          <p class="use">
+            Use carefully as a performance restart/stutter effect.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="critical"
+          data-priority="yes"
+          data-text="shift pitch bend plus minus pitch range fader percent 4 8 10 20 50 100"
+        >
+          <span class="badge critical">Must-know</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span
+            ><kbd>Pitch Bend − / +</kbd>
+          </div>
+          <p class="does">Change the pitch fader range.</p>
+          <p class="use">
+            Useful when you need smaller or larger tempo control, such as ±4%,
+            ±8%, ±10%, ±20%, ±50% or ±100%.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="pad"
+          data-priority="yes"
+          data-text="shift hot cue pad clear delete cue point remove cue"
+        >
+          <span class="badge pad">Pads</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>Hot Cue Pad</kbd>
+          </div>
+          <p class="does">Clear / delete that hot cue.</p>
+          <p class="use">
+            Use this to remove an unwanted cue point from the current track.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="pad"
+          data-priority="yes"
+          data-text="shift saved loop pad delete saved loop remove loop"
+        >
+          <span class="badge pad">Pads</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>Saved Loop Pad</kbd>
+          </div>
+          <p class="does">Delete that saved loop.</p>
+          <p class="use">
+            Use this when a saved loop is wrong or no longer needed.
+          </p>
+        </article>
+
+        <article
+          class="card"
+          data-category="warning"
+          data-priority="no"
+          data-text="shift auto loop no separate documented shortcut second bank auto loop button again loop lengths"
+        >
+          <span class="badge warning">Careful</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>Auto Loop</kbd>
+          </div>
+          <p class="does">
+            Usually no separate Shift shortcut is documented for Auto Loop.
+          </p>
+          <p class="use">
+            For Auto Loop, press <strong>Auto Loop</strong> to enter the mode,
+            then press <strong>Auto Loop again</strong> for the second bank of
+            loop lengths. Press a pad to activate/deactivate the loop.
+          </p>
+          <div class="note">
+            Keep this row here as a reminder: if you are trying to access more
+            Auto Loop lengths, press Auto Loop again rather than relying on
+            Shift.
+          </div>
+        </article>
+
+        <article
+          class="card"
+          data-category="pad"
+          data-priority="yes"
+          data-text="shift roll sampler mode drop sampler samples trigger drops risers fx drums"
+        >
+          <span class="badge pad">Pads</span>
+          <div class="shortcut">
+            <kbd>Shift</kbd><span class="plus">+</span><kbd>Roll</kbd>
+          </div>
+          <p class="does">Enter Sampler Mode on Engine DJ 3.0+.</p>
+          <p class="use">
+            Use this to trigger drops, drums, risers, FX or other one-shot
+            samples from the performance pads.
+          </p>
+          <div class="note">
+            Sampler tip: in Sampler Mode, holding
+            <strong>Shift + a playing sample pad</strong> stops that sample. In
+            library view, Shift + sample pad can unload/eject a sample slot.
+          </div>
+        </article>
       </section>
-    </article>
-  </div>
+    </main>
 
-  <footer>
-    <div class="wrap">
-      <p><strong>Note:</strong> Exact behaviour can vary slightly by firmware version and controller model variant. Test these shortcuts before using them live.</p>
+    <div class="wrap hidden" id="senuth" role="tabpanel" aria-hidden="true">
+      <article
+        style="
+          border: 1px solid var(--line);
+          padding: 18px;
+          border-radius: 18px;
+          background: linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.02),
+            rgba(255, 255, 255, 0.01)
+          );
+          margin-top: 18px;
+        "
+      >
+        <h1 style="margin-top: 0; color: var(--text)">
+          Senuth - Weekday Timetable
+        </h1>
+        <p>
+          <a
+            href="index.html"
+            style="color: var(--muted); text-decoration: underline"
+            >Back to Shortcuts</a
+          >
+        </p>
+        <table class="senuth-table" aria-label="Senuth timetable">
+          <tr>
+            <th style="width: 160px">Time</th>
+            <th>Activity</th>
+          </tr>
+          <tr>
+            <td>6:15 AM</td>
+            <td>Wake Up</td>
+          </tr>
+          <tr>
+            <td>4:00 PM - 4:15 PM</td>
+            <td>Wash</td>
+          </tr>
+          <tr>
+            <td>4:15 PM - 5:00 PM</td>
+            <td>Studies</td>
+          </tr>
+          <tr>
+            <td>5:00 PM - 5:15 PM</td>
+            <td>Clean Lunchbox &amp; Wash</td>
+          </tr>
+          <tr>
+            <td>5:15 PM - 7:15 PM</td>
+            <td>Screen Time</td>
+          </tr>
+          <tr>
+            <td>7:15 PM - 7:45 PM</td>
+            <td>Dinner</td>
+          </tr>
+          <tr>
+            <td>7:45 PM - 8:00 PM</td>
+            <td>Ironing / Exercise</td>
+          </tr>
+          <tr>
+            <td>8:00 PM - 8:15 PM</td>
+            <td>Music</td>
+          </tr>
+          <tr>
+            <td>8:15 PM - 8:30 PM</td>
+            <td>Prepare for the Next Day</td>
+          </tr>
+          <tr>
+            <td>8:30 PM - 9:00 PM</td>
+            <td>Clean House</td>
+          </tr>
+          <tr>
+            <td>9:00 PM</td>
+            <td>Sleep</td>
+          </tr>
+        </table>
+      </article>
     </div>
-  </footer>
 
-  <script>
-    const search = document.getElementById('search');
-    const clear = document.getElementById('clear');
-    const cards = Array.from(document.querySelectorAll('.card'));
-    const chips = Array.from(document.querySelectorAll('.chip'));
-    const gigMode = document.getElementById('gigMode');
-    let activeFilter = 'all';
+    <div class="wrap hidden" id="quotes" role="tabpanel" aria-hidden="true">
+      <article
+        style="
+          border: 1px solid var(--line);
+          padding: 18px;
+          border-radius: 18px;
+          background: linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.02),
+            rgba(255, 255, 255, 0.01)
+          );
+          margin-top: 18px;
+        "
+      >
+        <h1 style="margin-top: 0; color: var(--text)">Quotes</h1>
+        <p>
+          <a
+            href="index.html"
+            style="color: var(--muted); text-decoration: underline"
+            >Back to Shortcuts</a
+          >
+        </p>
+        <section>
+          <p>“Airtasker”</p>
+          <p>Hi,</p>
+          <p>
+            Tx for requesting a quote. Once you accept my offer, the platform
+            will allow us to communicate easier.. Then I will share my planning
+            and song selection tools.
+          </p>
+          <p>Here's what's next/included:</p>
+          <ul>
+            <li>
+              Help you plan your wedding/party with my templates and advice on
+              the vibe, playlist, first/special dance, cake cutting, must-play
+              and do-not-play songs, and other special moments.
+            </li>
+            <li>
+              You can meet me at my residence, e-meet, or message to see my
+              setup physically and discuss details.
+            </li>
+            <li>
+              I arrive 1 hour (1.5 for weddings) before start to set up and
+              sound check.
+            </li>
+          </ul>
+          <p>DJ Setup:</p>
+          <ul>
+            <li>
+              2 × JBL PRX ONE column arrays (has 2 built-in subwoofers, looks
+              elegant and sounds amazing)
+            </li>
+            <li>
+              OR 2 x JBL 15inch Speakers - Little bulky but not bad for budget
+              events
+            </li>
+            <li>
+              All in one DJ controller (instant song streaming via TIDAL) helps
+              me to play any song request on the spot (when I don't have it
+              already)
+            </li>
+            <li>6 Channel Sound mixer for live instruments</li>
+            <li>3 wireless, 2 wired microphones (for Karaoke/Sing-along)</li>
+            <li>
+              Lights, 2 moving heads, laser, and smoke machine. (Bubble machine
+              costs extra)
+            </li>
+            <li>
+              Complete backup system for any unexpected event (Applicable for
+              weddings only)
+            </li>
+            <li>
+              Microphone stands, keyboard stand available on request for free
+            </li>
+            <li>No extra charge even if your event runs longer than planned</li>
+            <li>
+              Quote includes travel from Perth, arriving early for setup, all
+              equipment, setup, DJ service, pack-down. No hidden fees. I own all
+              the equipment and I will be your DJ
+            </li>
+            <li>
+              Have a look at my profile for reviews and photos. This platform
+              does not allow audio or video uploads.
+            </li>
+          </ul>
+          <p>Thanks,<br />DJChanPerth</p>
+        </section>
+        <section>
+          <p>“crowdpleaser”</p>
+          <p>Hi,</p>
+          <p>
+            Tx for requesting a quote. Once you accept my offer, the platform
+            will allow us to communicate easier.. Then I will share my planning
+            and song selection tools.
+          </p>
+          <p>Here's what's next/included:</p>
+          <ul>
+            <li>
+              Help you plan your wedding/party with my templates and advice on
+              the vibe, playlist, first/special dance, cake cutting, must-play
+              and do-not-play songs, and other special moments.
+            </li>
+            <li>
+              You can meet me at my residence, e-meet, or message to see my
+              setup physically and discuss details.
+            </li>
+            <li>
+              I arrive 1 hour (1.5 for weddings) before start to set up and
+              sound check.
+            </li>
+          </ul>
+          <p>DJ Setup:</p>
+          <ul>
+            <li>
+              2 × JBL PRX ONE column arrays (has 2 built-in subwoofers, looks
+              elegant and sounds amazing)
+            </li>
+            <li>
+              OR 2 x JBL 15inch Speakers - Little bulky but not bad for budget
+              events
+            </li>
+            <li>
+              All in one DJ controller (instant song streaming via TIDAL) helps
+              me to play any song request on the spot (when I don't have it
+              already)
+            </li>
+            <li>6 Channel Sound mixer for live instruments</li>
+            <li>3 wireless, 2 wired microphones (for Karaoke/Sing-along)</li>
+            <li>
+              Lights, 2 moving heads, laser, and smoke machine. (Bubble machine
+              costs extra)
+            </li>
+            <li>
+              Complete backup system for any unexpected event (Applicable for
+              weddings only)
+            </li>
+            <li>No extra charge even if your event runs longer than planned</li>
+            <li>
+              Quote includes travel from Perth, arriving early for setup, all
+              equipment, setup, DJ service, pack-down. No hidden fees. I own all
+              the equipment and I will be your DJ
+            </li>
+            <li>
+              Microphone stands, keyboard stand available on request for free
+            </li>
+            <li>
+              Have a look at my profile for reviews, photos, audio and videos.
+            </li>
+          </ul>
+          <p>Thanks,<br />DJChanPerth</p>
+        </section>
+      </article>
+    </div>
 
-    function applyFilters() {
-      const query = search.value.trim().toLowerCase();
+    <div class="wrap hidden" id="prx" role="tabpanel" aria-hidden="true">
+      <article
+        style="
+          border: 1px solid var(--line);
+          padding: 18px;
+          border-radius: 18px;
+          background: linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.02),
+            rgba(255, 255, 255, 0.01)
+          );
+          margin-top: 18px;
+        "
+      >
+        <h3 style="margin-top: 0; color: var(--text)">PRX</h3>
+        <p>
+          <a
+            href="index.html"
+            style="color: var(--muted); text-decoration: underline"
+            >Back to Shortcuts</a
+          >
+        </p>
+        <section>
+          <p>Mic: Gate: Threshold : -52 db / -55 db (soft singer) to -45 db (loud singer)</p>
+          <p>Mic: Gate: Depth : -18 db</p>
+          <p>Mic: Gate: Attack : 5 ms</p>
+          <p>Mic: Gate: Hold : 80 ms</p>
+          <p>Mic: Gate: Release : 180 ms</p>
+          <br />
+          <p>Mic: Compressor Ratio 3:1</p>
+          <p>Mic: Compressor Threshold -20 dB</p>
+          <p>Mic: Compressor Attack 15 ms</p>
+          <p>Mic: Compressor Release 120 ms</p>
+          <p>Mic: Compressor Makeup Gain: +2 dB</p>
+          <br>
+          <p>Mic: FX Send: Reverb : -18 db (pop) / -15 db (ballads) / -24 db (Rock/Fast)</p>
+          <p>Mic: FX Send: Delay : -38 db / -35 db (pop) / -30 db (ballads) / -45 db (Rock/Fast)</p>
+          <p>Mic: FX Send: Chorus : -100 db (off)</p>
+          <p>Mic: FX Send: SubSynth : -100 db (off)</p>
+          <br />
+          <p>Music channel (Bluetooth, Aux, or Line In) CH 5, CH 6, CH 7: </p>
+          <p>All FX Sends = -100 dB </p>
+          <br>
+          <p>Master</p>
+          <p> FX Return: -15 dB</p>
+          <P>Reverb: Room Small</P>
+          <p>Delay : Simple 16ths</p>
+          <p>Chorus : Off </p>
+          <p>SubSynth : Off</p>
+          <br>
+          <p>AFS: Fixed Filters: 6</p>
+          <p>AFS: Live Filters: 6</p>
+          <P>AFS: Filter Width: Narrow</P>
+          <br>
+          <p>Master output: If the room sounds bright, a small master high-shelf cut of 1–2 dB above 8–10 kHz is usually enough.</p>
+        </section>
+      </article>
+    </div>
 
-      cards.forEach(card => {
-        const category = card.dataset.category;
-        const text = card.dataset.text.toLowerCase() + ' ' + card.textContent.toLowerCase();
-        const matchesFilter = activeFilter === 'all' || category === activeFilter;
-        const matchesSearch = !query || text.includes(query);
-        card.classList.toggle('hidden', !(matchesFilter && matchesSearch));
-      });
-    }
+    <footer>
+      <div class="wrap">
+        <p>
+          <strong>Note:</strong> Exact behaviour can vary slightly by firmware
+          version and controller model variant. Test these shortcuts before
+          using them live.
+        </p>
+      </div>
+    </footer>
 
-    search.addEventListener('input', applyFilters);
+    <script>
+      const search = document.getElementById("search");
+      const clear = document.getElementById("clear");
+      const cards = Array.from(document.querySelectorAll(".card"));
+      const chips = Array.from(document.querySelectorAll(".chip"));
+      const gigMode = document.getElementById("gigMode");
+      let activeFilter = "all";
 
-    clear.addEventListener('click', () => {
-      search.value = '';
-      activeFilter = 'all';
-      chips.forEach(chip => chip.classList.toggle('active', chip.dataset.filter === 'all'));
-      applyFilters();
-      search.focus();
-    });
+      function applyFilters() {
+        const query = search.value.trim().toLowerCase();
 
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        activeFilter = chip.dataset.filter;
-        chips.forEach(item => item.classList.toggle('active', item === chip));
+        cards.forEach((card) => {
+          const category = card.dataset.category;
+          const text =
+            card.dataset.text.toLowerCase() +
+            " " +
+            card.textContent.toLowerCase();
+          const matchesFilter =
+            activeFilter === "all" || category === activeFilter;
+          const matchesSearch = !query || text.includes(query);
+          card.classList.toggle("hidden", !(matchesFilter && matchesSearch));
+        });
+      }
+
+      search.addEventListener("input", applyFilters);
+
+      clear.addEventListener("click", () => {
+        search.value = "";
+        activeFilter = "all";
+        chips.forEach((chip) =>
+          chip.classList.toggle("active", chip.dataset.filter === "all"),
+        );
         applyFilters();
+        search.focus();
       });
-    });
 
-    gigMode.addEventListener('click', () => {
-      document.body.classList.toggle('gig');
-      gigMode.textContent = document.body.classList.contains('gig') ? 'All Shortcuts' : 'Gig Mode';
-    });
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          activeFilter = chip.dataset.filter;
+          chips.forEach((item) =>
+            item.classList.toggle("active", item === chip),
+          );
+          applyFilters();
+        });
+      });
 
-    // Tabs: show/hide primary sections (Shortcuts vs Senuth)
-    const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
-    const shortcutsTab = document.getElementById('shortcutsTab');
-    const senuthTab = document.getElementById('senuth');
-    const quotesTab = document.getElementById('quotes');
-    const mainHeader = document.getElementById('mainHeader');
-    const senuthHeader = document.getElementById('senuthHeader');
-    const tabsBar = document.querySelector('.tabs');
+      gigMode.addEventListener("click", () => {
+        document.body.classList.toggle("gig");
+        gigMode.textContent = document.body.classList.contains("gig")
+          ? "All Shortcuts"
+          : "Gig Mode";
+      });
 
-    function showPage(name) {
-      const isSenuth = name === 'senuth';
-      const isQuotes = name === 'quotes';
-      // tabs active state
-      tabButtons.forEach(b => b.classList.toggle('active', b.dataset.target === name));
-      // page panels
-      shortcutsTab.classList.toggle('hidden', isSenuth || isQuotes);
-      senuthTab.classList.toggle('hidden', !isSenuth);
-      quotesTab.classList.toggle('hidden', !isQuotes);
-      senuthTab.setAttribute('aria-hidden', String(!isSenuth));
-      quotesTab.setAttribute('aria-hidden', String(!isQuotes));
-      // headers / tabs bar
-      mainHeader.classList.toggle('hidden', isSenuth || isQuotes);
-      senuthHeader.classList.toggle('hidden', !isSenuth);
-      tabsBar.classList.toggle('hidden', isSenuth || isQuotes);
-    }
+      // Tabs: show/hide primary sections (Shortcuts vs Senuth)
+      const tabButtons = Array.from(document.querySelectorAll(".tab-btn"));
+      const shortcutsTab = document.getElementById("shortcutsTab");
+      const senuthTab = document.getElementById("senuth");
+      const quotesTab = document.getElementById("quotes");
+      const prxTab = document.getElementById("prx");
+      const mainHeader = document.getElementById("mainHeader");
+      const senuthHeader = document.getElementById("senuthHeader");
+      const tabsBar = document.querySelector(".tabs");
 
-    tabButtons.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.target)));
+      function showPage(name) {
+        const isSenuth = name === "senuth";
+        const isQuotes = name === "quotes";
+        const isPrx = name === "prx";
+        // tabs active state
+        tabButtons.forEach((b) =>
+          b.classList.toggle("active", b.dataset.target === name),
+        );
+        // page panels
+        shortcutsTab.classList.toggle("hidden", isSenuth || isQuotes || isPrx);
+        senuthTab.classList.toggle("hidden", !isSenuth);
+        quotesTab.classList.toggle("hidden", !isQuotes);
+        prxTab.classList.toggle("hidden", !isPrx);
+        senuthTab.setAttribute("aria-hidden", String(!isSenuth));
+        quotesTab.setAttribute("aria-hidden", String(!isQuotes));
+        prxTab.setAttribute("aria-hidden", String(!isPrx));
+        // headers / tabs bar
+        mainHeader.classList.toggle("hidden", isSenuth || isQuotes || isPrx);
+        senuthHeader.classList.toggle("hidden", !isSenuth);
+        tabsBar.classList.toggle("hidden", isSenuth || isQuotes || isPrx);
+      }
 
-    const backToShortcuts = document.getElementById('backToShortcuts');
-    if (backToShortcuts) backToShortcuts.addEventListener('click', () => showPage('shortcuts'));
-  </script>
-</body>
+      tabButtons.forEach((btn) =>
+        btn.addEventListener("click", () => showPage(btn.dataset.target)),
+      );
+
+      const backToShortcuts = document.getElementById("backToShortcuts");
+      if (backToShortcuts)
+        backToShortcuts.addEventListener("click", () => showPage("shortcuts"));
+    </script>
+  </body>
 </html>

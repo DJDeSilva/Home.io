@@ -553,20 +553,20 @@
         color: var(--text);
         border-color: rgba(255, 255, 255, 0.12);
       }
-      .senuth-table {
+      .SinSch-table {
         width: 100%;
         max-width: 860px;
         border-collapse: collapse;
         background: transparent;
       }
-      .senuth-table th,
-      .senuth-table td {
+      .SinSch-table th,
+      .SinSch-table td {
         border: 1px solid rgba(255, 255, 255, 0.07);
         padding: 10px;
         color: var(--muted);
         background: rgba(255, 255, 255, 0.02);
       }
-      .senuth-table th {
+      .SinSch-table th {
         color: var(--text);
         background: rgba(255, 255, 255, 0.03);
       }
@@ -590,7 +590,7 @@
           <button class="tab-btn active" data-target="shortcuts">
             Shortcuts
           </button>
-          <button class="tab-btn" data-target="senuth">Senuth</button>
+          <button class="tab-btn" data-target="SinSch">SinSch</button>
           <button class="tab-btn" data-target="quotes">Quotes</button>
           <button class="tab-btn" data-target="prx">PRX</button>
         </div>
@@ -604,8 +604,7 @@
           </div>
           <button class="gig-mode" id="gigMode" type="button">Gig Mode</button>
         </div>
-
-        <h1>Numark Mixstream Pro Shift Shortcuts</h1>
+      
         <p class="subtitle">
           A mobile-friendly cheat sheet combining the original Shift list plus
           Shift + Auto Loop and Shift + Roll.
@@ -640,14 +639,14 @@
       </div>
     </header>
 
-    <header id="senuthHeader" class="hidden">
+    <header id="SinSchHeader" class="hidden">
       <div class="wrap">
         <div class="topbar">
           <div class="brand">
             <div class="logo">S</div>
             <div>
-              Senuth
-              <small>Weekday Timetable</small>
+              SinSch
+              <small>Sinhala School Samithiya Settings</small>
             </div>
           </div>
           <button class="tab-btn" data-target="shortcuts" id="backToShortcuts">
@@ -905,7 +904,7 @@
       </section>
     </main>
 
-    <div class="wrap hidden" id="senuth" role="tabpanel" aria-hidden="true">
+    <div class="wrap hidden" id="SinSch" role="tabpanel" aria-hidden="true">
       <article
         style="
           border: 1px solid var(--line);
@@ -919,9 +918,6 @@
           margin-top: 18px;
         "
       >
-        <h1 style="margin-top: 0; color: var(--text)">
-          Senuth - Weekday Timetable
-        </h1>
         <p>
           <a
             href="index.html"
@@ -929,56 +925,42 @@
             >Back to Shortcuts</a
           >
         </p>
-        <table class="senuth-table" aria-label="Senuth timetable">
-          <tr>
-            <th style="width: 160px">Time</th>
-            <th>Activity</th>
-          </tr>
-          <tr>
-            <td>6:15 AM</td>
-            <td>Wake Up</td>
-          </tr>
-          <tr>
-            <td>4:00 PM - 4:15 PM</td>
-            <td>Wash</td>
-          </tr>
-          <tr>
-            <td>4:15 PM - 5:00 PM</td>
-            <td>Studies</td>
-          </tr>
-          <tr>
-            <td>5:00 PM - 5:15 PM</td>
-            <td>Clean Lunchbox &amp; Wash</td>
-          </tr>
-          <tr>
-            <td>5:15 PM - 7:15 PM</td>
-            <td>Screen Time</td>
-          </tr>
-          <tr>
-            <td>7:15 PM - 7:45 PM</td>
-            <td>Dinner</td>
-          </tr>
-          <tr>
-            <td>7:45 PM - 8:00 PM</td>
-            <td>Ironing / Exercise</td>
-          </tr>
-          <tr>
-            <td>8:00 PM - 8:15 PM</td>
-            <td>Music</td>
-          </tr>
-          <tr>
-            <td>8:15 PM - 8:30 PM</td>
-            <td>Prepare for the Next Day</td>
-          </tr>
-          <tr>
-            <td>8:30 PM - 9:00 PM</td>
-            <td>Clean House</td>
-          </tr>
-          <tr>
-            <td>9:00 PM</td>
-            <td>Sleep</td>
-          </tr>
-        </table>
+    <main id="top">
+
+      <section class="section" aria-labelledby="prx-r-title">
+        <h2 id="prx-r-title">PRX-R Settings</h2>
+        <div class="song-list">
+          <ul>
+            <li>Main: -10 dB — No EQ</li>
+            <li>CH1: 26 dB — Speech</li>
+            <li>CH2: 30 dB — Speech</li>
+            <li>CH3: 40 dB — No EQ</li>
+            <li>CH4: 26 dB — Female Vocal</li>
+            <li>CH5: -20 dB — Bass Gtr</li>
+            <li>CH6: -20 dB — Bass Gtr</li>
+            <li>CH7: -8 dB — No EQ</li>
+            <li>Mix Out: 0 dB</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="prx-l-title">
+        <h2 id="prx-l-title">PRX-L Settings</h2>
+        <div class="song-list">
+          <ul>
+            <li>Main: -10 dB — No EQ</li>
+            <li>CH1: 38 dB — Speech</li>
+            <li>CH2: 38 dB — Speech</li>
+            <li>CH3: 42 dB — Female Vocal</li>
+            <li>CH4: 42 dB — Bass Gtr</li>
+            <li>CH5: -100 dB — Bass Gtr</li>
+            <li>CH6: 0 dB — No EQ</li>
+            <li>CH7: 0 dB — No EQ</li>
+            <li>Mix Out: -100 dB</li>
+          </ul>
+        </div>
+      </section>
+    </main>
       </article>
     </div>
 
@@ -1250,18 +1232,18 @@
           : "Gig Mode";
       });
 
-      // Tabs: show/hide primary sections (Shortcuts vs Senuth)
+      // Tabs: show/hide primary sections (Shortcuts vs SinSch)
       const tabButtons = Array.from(document.querySelectorAll(".tab-btn"));
       const shortcutsTab = document.getElementById("shortcutsTab");
-      const senuthTab = document.getElementById("senuth");
+      const SinSchTab = document.getElementById("SinSch");
       const quotesTab = document.getElementById("quotes");
       const prxTab = document.getElementById("prx");
       const mainHeader = document.getElementById("mainHeader");
-      const senuthHeader = document.getElementById("senuthHeader");
+      const SinSchHeader = document.getElementById("SinSchHeader");
       const tabsBar = document.querySelector(".tabs");
 
       function showPage(name) {
-        const isSenuth = name === "senuth";
+        const isSinSch = name === "SinSch";
         const isQuotes = name === "quotes";
         const isPrx = name === "prx";
         // tabs active state
@@ -1269,17 +1251,17 @@
           b.classList.toggle("active", b.dataset.target === name),
         );
         // page panels
-        shortcutsTab.classList.toggle("hidden", isSenuth || isQuotes || isPrx);
-        senuthTab.classList.toggle("hidden", !isSenuth);
+        shortcutsTab.classList.toggle("hidden", isSinSch || isQuotes || isPrx);
+        SinSchTab.classList.toggle("hidden", !isSinSch);
         quotesTab.classList.toggle("hidden", !isQuotes);
         prxTab.classList.toggle("hidden", !isPrx);
-        senuthTab.setAttribute("aria-hidden", String(!isSenuth));
+        SinSchTab.setAttribute("aria-hidden", String(!isSinSch));
         quotesTab.setAttribute("aria-hidden", String(!isQuotes));
         prxTab.setAttribute("aria-hidden", String(!isPrx));
         // headers / tabs bar
-        mainHeader.classList.toggle("hidden", isSenuth || isQuotes || isPrx);
-        senuthHeader.classList.toggle("hidden", !isSenuth);
-        tabsBar.classList.toggle("hidden", isSenuth || isQuotes || isPrx);
+        mainHeader.classList.toggle("hidden", isSinSch || isQuotes || isPrx);
+        SinSchHeader.classList.toggle("hidden", !isSinSch);
+        tabsBar.classList.toggle("hidden", isSinSch || isQuotes || isPrx);
       }
 
       tabButtons.forEach((btn) =>

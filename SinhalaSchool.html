@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinhala School | DJ De Silva</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+        width: 100%;
+        background: radial-gradient(circle at top left, #141431 0%, #050611 35%, #020206 100%);
+        color: #eef2ff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        padding: 0.9rem 0.75rem 1.5rem;
+      }
+
+      main {
+        width: min(100%, 960px);
+        margin: 0 auto;
+        background: rgba(14, 18, 44, 0.96);
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.32);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+      }
+
+      .page-title {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: clamp(2rem, 9vw, 2.8rem);
+        letter-spacing: 0.06em;
+        color: #ffd85f;
+        text-shadow: 0 0 18px rgba(255, 216, 95, 0.28);
+      }
+
+      .section {
+        margin-bottom: 1.8rem;
+      }
+
+      .section h2 {
+        font-size: clamp(1.3rem, 5vw, 1.75rem);
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 1.35rem;
+        background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+        border: 1px solid rgba(255,255,255,0.08);
+        color: #f4f7ff;
+      }
+
+      .song-list {
+        display: grid;
+        gap: 1rem;
+        padding: 1.1rem;
+        border-radius: 1.35rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+      }
+
+      .song-list p,
+      .song-list li {
+        line-height: 1.75;
+        color: #e7ecff;
+      }
+
+      .song-list ul {
+        list-style: none;
+        padding-left: 1rem;
+        margin: 0;
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .song-list ul li {
+        position: relative;
+        padding-left: 1.2rem;
+      }
+
+      .song-list ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 0.05rem;
+        color: #65e0ff;
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+
+      .link-card {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .link-card a {
+        color: #72d9ff;
+      }
+
+      .link-card a:hover,
+      .link-card a:focus {
+        color: #ffffff;
+        transform: translateX(2px);
+      }
+
+      a,
+      a:visited {
+        color: #00d9ff !important;
+      }
+
+      a:hover,
+      a:focus {
+        color: #2de0ff !important;
+      }
+
+      @media (max-width: 520px) {
+        body {
+          padding: 0.75rem 0.65rem 1.2rem;
+        }
+
+        main {
+          padding: 1rem;
+          border-radius: 1rem;
+        }
+
+        .page-title {
+          margin-bottom: 1.25rem;
+        }
+
+        .section h2 {
+          padding: 0.8rem 0.95rem;
+          margin-bottom: 0.85rem;
+          font-size: 1.45rem;
+        }
+
+        .song-list {
+          padding: 0.95rem;
+          gap: 0.85rem;
+        }
+
+        .song-list ul {
+          padding-left: 0.95rem;
+        }
+
+        .song-list ul li {
+          padding-left: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="top">
+
+      <section class="section" aria-labelledby="prx-r-title">
+        <h2 id="prx-r-title">PRX-R Settings</h2>
+        <div class="song-list">
+          <ul>
+            <li>Main: -10 dB — No EQ</li>
+            <li>CH1: 26 dB — Speech</li>
+            <li>CH2: 30 dB — Speech</li>
+            <li>CH3: 40 dB — No EQ</li>
+            <li>CH4: 26 dB — Female Vocal</li>
+            <li>CH5: -20 dB — Bass Gtr</li>
+            <li>CH6: -20 dB — Bass Gtr</li>
+            <li>CH7: -8 dB — No EQ</li>
+            <li>Mix Out: 0 dB</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="prx-l-title">
+        <h2 id="prx-l-title">PRX-L Settings</h2>
+        <div class="song-list">
+          <ul>
+            <li>Main: -10 dB — No EQ</li>
+            <li>CH1: 38 dB — Speech</li>
+            <li>CH2: 38 dB — Speech</li>
+            <li>CH3: 42 dB — Female Vocal</li>
+            <li>CH4: 42 dB — Bass Gtr</li>
+            <li>CH5: -100 dB — Bass Gtr</li>
+            <li>CH6: 0 dB — No EQ</li>
+            <li>CH7: 0 dB — No EQ</li>
+            <li>Mix Out: -100 dB</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

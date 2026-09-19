@@ -576,6 +576,74 @@
         display: block !important;
         max-width: 100% !important;
       }
+
+      .kamal-mobile-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .kamal-group {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        overflow: hidden;
+      }
+
+      .kamal-group h4 {
+        margin: 0;
+        padding: 14px 16px;
+        font-size: 1.05rem;
+        color: var(--text);
+        background: rgba(83, 220, 255, 0.08);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .kamal-row {
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+        gap: 10px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .kamal-row:last-child {
+        border-bottom: none;
+      }
+
+      .kamal-name,
+      .kamal-meta {
+        min-width: 0;
+      }
+
+      .kamal-name strong,
+      .kamal-meta strong {
+        display: block;
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 4px;
+      }
+
+      .kamal-name span,
+      .kamal-meta span {
+        display: block;
+        color: var(--text);
+        line-height: 1.45;
+        word-break: break-word;
+      }
+
+      @media (max-width: 600px) {
+        .kamal-row {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          padding: 12px 14px;
+        }
+
+        .kamal-group h4 {
+          font-size: 0.98rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -593,6 +661,7 @@
           <button class="tab-btn" data-target="SinSch">SinSch</button>
           <button class="tab-btn" data-target="quotes">Quotes</button>
           <button class="tab-btn" data-target="prx">PRX</button>
+          <button class="tab-btn" data-target="kamal">Kamal</button>
         </div>
         <div class="topbar">
           <div class="brand">
@@ -1175,6 +1244,318 @@
       </article>
     </div>
 
+    <div class="wrap hidden" id="kamal" role="tabpanel" aria-hidden="true">
+      <article
+        style="
+          border: 1px solid var(--line);
+          padding: 18px;
+          border-radius: 18px;
+          background: linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.02),
+            rgba(255, 255, 255, 0.01)
+          );
+          margin-top: 18px;
+        "
+      >
+        <h3 style="margin-top: 0; color: var(--text)">Kamal</h3>
+        <p>
+          <a
+            href="index.html"
+            style="color: var(--muted); text-decoration: underline"
+            >Back to Shortcuts</a
+          >
+        </p>
+                <section class="kamal-mobile-list">
+          <div class="kamal-group">
+            <h4>🍳 Breakfast options</h4>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 1</strong><span>2 eggs + egg whites + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~32 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~300</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 2</strong><span>3 eggs + egg whites</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~33 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~330</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 3</strong><span>High-protein Greek yoghurt + berries</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~30 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~280</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 4</strong><span>Cottage cheese + berries</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~30 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~260</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 5</strong><span>Oats + whey + berries</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~32 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~330</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 6</strong><span>Eggs + egg whites + toast</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~30 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~320</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 7</strong><span>Omelette with eggs, egg whites, mushrooms, spinach</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~33 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~300</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 8</strong><span>Whey + low-fat milk + banana</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~32 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~300</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 9</strong><span>Cottage cheese + eggs</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~30 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~320</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 10</strong><span>Greek yoghurt + whey + strawberries</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~300</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 11</strong><span>Smoked salmon + eggs + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~30 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~300</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 12</strong><span>Tuna + eggs + wholegrain toast</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~350</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 13</strong><span>Skyr + berries + oats</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~32 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~320</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 14</strong><span>Whey + low-fat milk + berries</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~32 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~270</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 15</strong><span>Egg whites + eggs + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~37 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>~330</span></div>
+            </div>
+          </div>
+
+          <div class="kamal-group">
+            <h4>🥗 Lunch options</h4>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 1</strong><span>Chicken breast + salad + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 2</strong><span>Chicken breast + vegetables + potato</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 3</strong><span>Chicken + wrap + salad + yoghurt</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 4</strong><span>Tuna + eggs + salad</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 5</strong><span>Tuna + wholegrain bread + salad</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 6</strong><span>White fish + vegetables + potato</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 7</strong><span>Barramundi + salad + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 8</strong><span>Salmon + salad</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~32 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 9</strong><span>Lean beef + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~34 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 10</strong><span>Lean beef mince + vegetables + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 11</strong><span>Chicken + lentils + salad</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~38 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 12</strong><span>Chicken + chickpeas + salad</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 13</strong><span>Prawns + salad + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~38 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 14</strong><span>Prawns + vegetables + noodles</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~32 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 15</strong><span>Chicken + lentils + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 16</strong><span>Turkey breast + bread + salad</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~38 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 17</strong><span>Cottage cheese + tuna + salad</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 18</strong><span>Firm tofu + edamame + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 19</strong><span>Tempeh + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~30 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 20</strong><span>Chicken + satay sauce + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+          </div>
+
+          <div class="kamal-group">
+            <h4>🍽️ Dinner options</h4>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 1</strong><span>Chicken breast + vegetables + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 2</strong><span>Chicken + vegetables + curry sauce + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 3</strong><span>Chicken + stir-fry vegetables + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 4</strong><span>White fish + vegetables + potato</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 5</strong><span>Salmon + vegetables + potato</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 6</strong><span>Lean steak + vegetables + potato</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 7</strong><span>Lean beef mince + kidney beans + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 8</strong><span>Lean beef + vegetables + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 9</strong><span>Kangaroo + vegetables + potato</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 10</strong><span>Lean lamb + salad + potato</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 11</strong><span>Prawns + vegetables + curry sauce + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~38 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 12</strong><span>Tuna + high-protein pasta + tomato sauce</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 13</strong><span>Chicken + high-protein pasta + tomato sauce</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~45 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 14</strong><span>Chicken + lentils + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~40 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 15</strong><span>Firm tofu + edamame + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 16</strong><span>Tempeh + vegetables + rice</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 17</strong><span>Eggs + egg whites + vegetables</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~33 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 18</strong><span>Turkey meatballs + vegetables + tomato sauce</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~35 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 19</strong><span>Chicken + salad + rice + yoghurt sauce</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~42 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+            <div class="kamal-row">
+              <div class="kamal-name"><strong>Meal 20</strong><span>White fish + tortillas + salad + yoghurt</span></div>
+              <div class="kamal-meta"><strong>Protein</strong><span>~38 g</span></div>
+              <div class="kamal-meta"><strong>Calories</strong><span>—</span></div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
 
     <script>
       const search = document.getElementById("search");
@@ -1235,6 +1616,7 @@
       const SinSchTab = document.getElementById("SinSch");
       const quotesTab = document.getElementById("quotes");
       const prxTab = document.getElementById("prx");
+      const kamalTab = document.getElementById("kamal");
       const mainHeader = document.getElementById("mainHeader");
       const SinSchHeader = document.getElementById("SinSchHeader");
       const tabsBar = document.querySelector(".tabs");
@@ -1243,22 +1625,31 @@
         const isSinSch = name === "SinSch";
         const isQuotes = name === "quotes";
         const isPrx = name === "prx";
+        const isKamal = name === "kamal";
         // tabs active state
         tabButtons.forEach((b) =>
           b.classList.toggle("active", b.dataset.target === name),
         );
         // page panels
-        shortcutsTab.classList.toggle("hidden", isSinSch || isQuotes || isPrx);
+        shortcutsTab.classList.toggle(
+          "hidden",
+          isSinSch || isQuotes || isPrx || isKamal,
+        );
         SinSchTab.classList.toggle("hidden", !isSinSch);
         quotesTab.classList.toggle("hidden", !isQuotes);
         prxTab.classList.toggle("hidden", !isPrx);
+        kamalTab.classList.toggle("hidden", !isKamal);
         SinSchTab.setAttribute("aria-hidden", String(!isSinSch));
         quotesTab.setAttribute("aria-hidden", String(!isQuotes));
         prxTab.setAttribute("aria-hidden", String(!isPrx));
+        kamalTab.setAttribute("aria-hidden", String(!isKamal));
         // headers / tabs bar
-        mainHeader.classList.toggle("hidden", isSinSch || isQuotes || isPrx);
+        mainHeader.classList.toggle(
+          "hidden",
+          isSinSch || isQuotes || isPrx || isKamal,
+        );
         SinSchHeader.classList.toggle("hidden", !isSinSch);
-        tabsBar.classList.toggle("hidden", isSinSch || isQuotes || isPrx);
+        tabsBar.classList.toggle("hidden", isSinSch || isQuotes || isPrx || isKamal);
       }
 
       tabButtons.forEach((btn) =>
